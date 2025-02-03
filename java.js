@@ -1,5 +1,3 @@
-// Removed comments for brevity
-
 const contactForm = document.getElementById("contactForm");
 const signupForm = document.getElementById("signupForm");
 const newsContainer = document.getElementById("newsContainer");
