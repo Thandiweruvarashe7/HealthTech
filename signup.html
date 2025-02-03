@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - HealthTech 2024</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+    <h1>Sign Up for HealthTech 2024</h1>
+  </header>
+
+  <main>
+    <section class="signup-form">
+      <h2>Join the Event</h2>
+      <form id="signupForm">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+        <label for="ticketType">Ticket Type:</label>
+        <select id="ticketType" name="ticketType" required>
+          <option value="">Select a ticket type</option>
+          <option value="single-day">Single Day</option>
+          <option value="multi-day">Multi-Day</option>
+          <option value="vip">VIP</option>
+        </select>
+
+        <button type="submit">Sign Up</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 HealthTech Event</p>
+  </footer>
+
+  <script src="java.js"></script>
+</body>
+
+</html>
