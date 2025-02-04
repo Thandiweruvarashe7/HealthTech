@@ -14,21 +14,22 @@ function handleSubmit(event, form) {
 
 async function fetchNews() {
   try {
-    const url = "https://newsapi.org/v2/everything?q=health+technology&apiKey=94b9067a5c5d4f8eb9e1ad40126adf96";
+    const apiKey = "09c839d247c3a3e0152637baba279bab";
+    const url = `https://gnews.io/api/v4/search?q=health+technology&lang=en&token=${apiKey}`;
+    
     const response = await fetch(url);
     const data = await response.json();
 
     if (data.articles && data.articles.length > 0) {
       let newsHTML = "";
-      for (let i = 0; i < 5; i++) {
-        let article = data.articles[i];
+      data.articles.slice(0, 5).forEach(article => {
         newsHTML += `
           <h3><a href="${article.url}" target="_blank">${article.title}</a></h3>
           <p>${article.description ? article.description : "No description available."}</p>
           <small>Published on: ${new Date(article.publishedAt).toLocaleDateString()}</small>
           <hr>
         `;
-      }
+      });
       newsContainer.innerHTML = newsHTML;
     } else {
       newsContainer.innerHTML = "<p>No news available at the moment.</p>";
